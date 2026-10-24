@@ -12,7 +12,7 @@ public class Programa extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Programa.class.getName());
     
-    //Declarando numeros de entrada inteiros    
+      
     int NumEnter1;
     int NumEnter2;
     int Resultado;
@@ -30,16 +30,16 @@ public class Programa extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     
     private void EnterNumbers(String q) {
-    String Nums = jtxtResultado.getText();
-    
-    //limita o numero a 3 digitos
-    if (Nums.length() < 3) {
-        Nums += q;
-        jtxtResultado.setText(Nums);
+        String Nums = jtxtResultado.getText();
+
+        //limita o input a 3 digitos
+        if (Nums.length() < 3) {
+            Nums = Nums + q;
+            jtxtResultado.setText(Nums);
     }
 }
     
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -64,6 +64,7 @@ public class Programa extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MegaCalculaTron_2077");
         setBackground(new java.awt.Color(255, 206, 206));
         setForeground(new java.awt.Color(255, 206, 206));
         setPreferredSize(new java.awt.Dimension(400, 700));
@@ -200,6 +201,7 @@ public class Programa extends javax.swing.JFrame {
         jbuttonSoma.addActionListener(this::jbuttonSomaActionPerformed);
         getContentPane().add(jbuttonSoma, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 100, 100));
 
+        jtxtResultado.setEditable(false);
         jtxtResultado.setBackground(new java.awt.Color(255, 235, 235));
         jtxtResultado.setFont(new java.awt.Font("URW Gothic", 1, 24)); // NOI18N
         jtxtResultado.setForeground(new java.awt.Color(116, 46, 46));
@@ -212,6 +214,7 @@ public class Programa extends javax.swing.JFrame {
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         jScrollPane1.setWheelScrollingEnabled(false);
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(255, 235, 235));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -221,88 +224,109 @@ public class Programa extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 400, 50));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jtxtResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtResultadoActionPerformed
-    }//GEN-LAST:event_jtxtResultadoActionPerformed
+    private void jtxtResultadoActionPerformed(java.awt.event.ActionEvent evt) {                                              
+    }                                             
 
-    private void jbuttonUmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonUmActionPerformed
+    
+    //botoes = numeros na tela
+    private void jbuttonUmActionPerformed(java.awt.event.ActionEvent evt) {                                          
         EnterNumbers("1");
-    }//GEN-LAST:event_jbuttonUmActionPerformed
+    }                                         
 
-    private void jbuttonDoisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonDoisActionPerformed
+    private void jbuttonDoisActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("2");
-    }//GEN-LAST:event_jbuttonDoisActionPerformed
+    }                                           
 
-    private void jbuttonTresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonTresActionPerformed
+    private void jbuttonTresActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("3");
-    }//GEN-LAST:event_jbuttonTresActionPerformed
+    }                                           
 
-    private void jbuttonQuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonQuatroActionPerformed
+    private void jbuttonQuatroActionPerformed(java.awt.event.ActionEvent evt) {                                              
         EnterNumbers("4");
-    }//GEN-LAST:event_jbuttonQuatroActionPerformed
+    }                                             
 
-    private void jbuttonCincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonCincoActionPerformed
+    private void jbuttonCincoActionPerformed(java.awt.event.ActionEvent evt) {                                             
         EnterNumbers("5");
-    }//GEN-LAST:event_jbuttonCincoActionPerformed
+    }                                            
 
-    private void jbuttonSeisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonSeisActionPerformed
+    private void jbuttonSeisActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("6");
-    }//GEN-LAST:event_jbuttonSeisActionPerformed
+    }                                           
 
-    private void jbuttonSeteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonSeteActionPerformed
+    private void jbuttonSeteActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("7");
-    }//GEN-LAST:event_jbuttonSeteActionPerformed
+    }                                           
 
-    private void jbuttonOitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonOitoActionPerformed
+    private void jbuttonOitoActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("8");
-    }//GEN-LAST:event_jbuttonOitoActionPerformed
+    }                                           
 
-    private void jbuttonNoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonNoveActionPerformed
+    private void jbuttonNoveActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("9");
-    }//GEN-LAST:event_jbuttonNoveActionPerformed
+    }                                           
 
-    private void jbuttonZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonZeroActionPerformed
+    private void jbuttonZeroActionPerformed(java.awt.event.ActionEvent evt) {                                            
         EnterNumbers("0");
-    }//GEN-LAST:event_jbuttonZeroActionPerformed
-
-    private void jbuttonSomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonSomaActionPerformed
+    }                                           
+            //botao de soma
+    private void jbuttonSomaActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        try{
         NumEnter1 = Integer.parseInt(jtxtResultado.getText());
         jtxtResultado.setText("");
         Op = "+";
-    }//GEN-LAST:event_jbuttonSomaActionPerformed
-
-    private void jbuttonMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonMenosActionPerformed
+        } catch (NumberFormatException e){
+            jtxtResultado.setText("ERRO");
+        }
+    }                                           
+            //botao de subtração
+    private void jbuttonMenosActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        try{
         NumEnter1 = Integer.parseInt(jtxtResultado.getText());
         jtxtResultado.setText("");
         Op = "-";
-    }//GEN-LAST:event_jbuttonMenosActionPerformed
-
-    private void jbuttonDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonDivActionPerformed
+        } catch (NumberFormatException e){
+            jtxtResultado.setText("ERRO");
+        }
+    }                                            
+            //botao de divisão
+    private void jbuttonDivActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        try{
         NumEnter1 = Integer.parseInt(jtxtResultado.getText());
         jtxtResultado.setText("");
         Op = "/";
-    }//GEN-LAST:event_jbuttonDivActionPerformed
-
-    private void jbuttonMultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonMultiActionPerformed
+        } catch (NumberFormatException e){
+            jtxtResultado.setText("ERRO");
+        }
+    }                                          
+            //botao de multiplicação
+    private void jbuttonMultiActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        try{
         NumEnter1 = Integer.parseInt(jtxtResultado.getText());
         jtxtResultado.setText("");
         Op = "*";
-    }//GEN-LAST:event_jbuttonMultiActionPerformed
-
-    private void jbuttonLimpaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonLimpaActionPerformed
+        } catch (NumberFormatException e){
+            jtxtResultado.setText("ERRO");
+        }
+       
+    }                                            
+            //botao "LIMPA"
+    private void jbuttonLimpaActionPerformed(java.awt.event.ActionEvent evt) {                                             
         jtxtResultado.setText("");
         NumEnter1 = 0;
         NumEnter2= 0;
         Resultado = 0;
         Op = null;
-    }//GEN-LAST:event_jbuttonLimpaActionPerformed
-
-    private void jbuttonIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttonIgualActionPerformed
+    }                                            
+            // botao de igualdade
+    private void jbuttonIgualActionPerformed(java.awt.event.ActionEvent evt) {                                             
         NumEnter2 = Integer.parseInt(jtxtResultado.getText());
+        
+        
                 
         switch(Op){
-            case"+":
+            case "+":
                 Resultado = NumEnter1 + NumEnter2;
                 jtxtResultado.setText(String.valueOf(Resultado));
                 System.out.println(Resultado);
@@ -339,7 +363,7 @@ public class Programa extends javax.swing.JFrame {
             default: 
                 return;
         }
-    }//GEN-LAST:event_jbuttonIgualActionPerformed
+    }                                            
 
     /**
      * @param args the command line arguments
@@ -366,7 +390,7 @@ public class Programa extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new Programa().setVisible(true));
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
@@ -387,5 +411,5 @@ public class Programa extends javax.swing.JFrame {
     private javax.swing.JButton jbuttonUm;
     private javax.swing.JButton jbuttonZero;
     private javax.swing.JTextField jtxtResultado;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
